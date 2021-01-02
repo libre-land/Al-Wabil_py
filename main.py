@@ -7,7 +7,8 @@ Window.size = (414, 736)
 
 
 class StartScreen(Screen):
-    pass
+    def next_screen_buttton(self):
+        self.manager.current = 'main_screen'
 
 
 class MainScreen(Screen):
