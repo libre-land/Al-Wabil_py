@@ -1,5 +1,7 @@
 from kivymd.app import MDApp
 from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.floatlayout import FloatLayout
+from kivymd.uix.tab import MDTabsBase
 from kivy.core.window import Window
 
 
@@ -9,6 +11,10 @@ Window.size = (414, 736)
 class StartScreen(Screen):
     def next_screen_buttton(self):
         self.manager.current = 'main_screen'
+
+
+class Tab(FloatLayout, MDTabsBase):
+    pass
 
 
 class MainScreen(Screen):
