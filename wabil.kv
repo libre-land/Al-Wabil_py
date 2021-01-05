@@ -21,7 +21,15 @@
             on_release: start_screen.next_screen_buttton()
 
 
+<TextScreen>:
+    id: text_screen
+    MDLabel:
+        text: 'Chapter'
+        halign: 'center'
+
+
 <MainScreen>:
+    id: main_screen
     BoxLayout:
         orientation: 'vertical'
 
@@ -33,5 +41,12 @@
         MDTabs:
             Tab:
                 text: 'Chapters'
+                ScrollView:
+                    MDList:
+                        OneLineListItem:
+                            text: 'Слова поминания, произносимые в начале дня'
+                            on_release: main_screen.new_screen()
+
+
             Tab:
                 text: 'Names'

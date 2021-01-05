@@ -17,8 +17,13 @@ class Tab(FloatLayout, MDTabsBase):
     pass
 
 
-class MainScreen(Screen):
+class TextScreen(Screen):
     pass
+
+
+class MainScreen(Screen):
+    def new_screen(self):
+        self.manager.current = 'text_screen'
 
 
 class WabilApp(MDApp):
@@ -26,6 +31,7 @@ class WabilApp(MDApp):
         sm = ScreenManager()
         sm.add_widget(StartScreen(name='start_screen'))
         sm.add_widget(MainScreen(name='main_screen'))
+        sm.add_widget(TextScreen(name='text_screen'))
 
         return sm
 
